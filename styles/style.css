@@ -44,7 +44,7 @@ ol {
   max-width: 1440px;
   gap: 30px;
   align-items: end;
-  padding-bottom: 133px;
+  margin: auto 0;
 }
 
 .content__list {
