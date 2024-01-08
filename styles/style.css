@@ -9,6 +9,8 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -36,3 +38,232 @@ ul,
 ol {
   list-style: none;
 }
+
+.content {
+  display: flex;
+  max-width: 1440px;
+  gap: 30px;
+  align-items: end;
+  padding-bottom: 133px;
+}
+
+.content__list {
+  position: relative;
+  max-height: 300px;
+  overflow: auto;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content__video-card-thumbnail{
+  max-width: 194px;
+  max-height: 103px;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content__details {
+  min-width: 399px;
+  max-height: 100%;
+}
+
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  margin: 2px;
+}
+
+.content__card-link:focus {
+  outline: 0;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #FFF;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__video-card-title {
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  padding-left: 2px;
+  padding-top: 2px;
+}
+
+.content__video-card-description {
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.2px;
+  padding-left: 2px;
+}
+
+.button {
+  color: #FFF;
+  text-align: center;
+  cursor: pointer;
+  font-family: Fira Sans Condensed;
+  background-color: #1b1919;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: 1px solid #FFF;
+
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:focus-visible {
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.search-form__submit-button {
+  padding: 6px 73.5px;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
+.more-button {
+  padding: 6px 146.5px;
+}
+
+.title {
+  margin-bottom: 28px;
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.result__video-container {  /*Почему то видео по итогу в 399px в высоту*/
+  position: relative;
+  width: 711px;
+  height: 386px;
+  margin-bottom: 16px;
+}
+
+.result__video {
+  position: absolute;
+  min-width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.search-form__label {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.search-form__label:hover {   /*Не могу придумать, что бы не было подчеркивания у "Санкт Петербург, например"*/
+  text-decoration: underline;
+}
+
+.search-form__fieldset {
+  border: 0px;
+}
+
+.search-form__textfield {
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  background-color: #1b1919;
+  border-left: 0;
+  border-right: 0;
+  color: rgba(255, 255, 255, 0.70);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  min-width: 225px;
+  padding: 2.5px 0;
+}
+
+.search-form__textfield:focus {
+  outline: 0;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #FFF;
+}
+
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #FFF;
+  margin-right: 5px;
+}
+
+.search-form__pseudo-checkbox:checked + .search-form__label-text::before { /*Почему то не появляется активный чекбокс*/
+  content: '';
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+}
+
+.search-form__checkbox-list{
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__fieldset-title {
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+} 
+
