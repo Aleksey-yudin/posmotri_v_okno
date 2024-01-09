@@ -41,7 +41,6 @@ ol {
 
 .content {
   display: flex;
-  max-width: 1440px;
   gap: 30px;
   align-items: end;
   margin: auto 0;
@@ -96,9 +95,8 @@ ol {
 
 .content__video-card-title {
   color: #FFF;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
-  font-style: normal;
   font-weight: 700;
   line-height: 100%;
   text-transform: uppercase;
@@ -120,14 +118,13 @@ ol {
   color: #FFF;
   text-align: center;
   cursor: pointer;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   background-color: #1b1919;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   border: 1px solid #FFF;
-
 }
 
 .button:focus {
@@ -160,7 +157,7 @@ ol {
 .title {
   margin-bottom: 28px;
   color: #FFF;
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-style: normal;
   font-weight: 700;
@@ -172,7 +169,7 @@ ol {
   color: #545050;
 }
 
-.result__video-container {  /*Почему то видео по итогу в 399px в высоту*/
+.result__video-container {
   position: relative;
   width: 711px;
   height: 386px;
@@ -181,7 +178,8 @@ ol {
 
 .result__video {
   position: absolute;
-  min-width: 100%;
+  max-width: 711px;
+  height: 386px;
   top: 0px;
   left: 0px;
 }
@@ -198,10 +196,6 @@ ol {
   align-items: center;
 }
 
-.search-form__label:hover {   /*Не могу придумать, что бы не было подчеркивания у "Санкт Петербург, например"*/
-  text-decoration: underline;
-}
-
 .search-form__fieldset {
   border: 0px;
 }
@@ -209,15 +203,14 @@ ol {
 .search-form__textfield {
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
-  background-color: #1b1919;
+  background-color: #1B1919;
   border-left: 0;
   border-right: 0;
+  appearance: none;
   color: rgba(255, 255, 255, 0.70);
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   min-width: 225px;
   padding: 2.5px 0;
 }
@@ -230,23 +223,32 @@ ol {
   outline: 1px solid #FFF;
 }
 
-.search-form__pseudo-checkbox {
+input[type='checkbox'] + .search-form__pseudo-checkbox {
+  display: flex;
+  position: relative;
   width: 19px;
   height: 19px;
   border: 1px solid #FFF;
   margin-right: 5px;
 }
 
-.search-form__pseudo-checkbox:checked + .search-form__label-text::before { /*Почему то не появляется активный чекбокс*/
+input[type='checkbox']:checked + .search-form__pseudo-checkbox::before {
   content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
   width: 15px;
   height: 15px;
-  background-color: #fff;
+  background: #FFF;
 }
 
 .search-form__checkbox-list{
   display: flex;
   gap: 15px;
+}
+
+.search-form__label-text:hover {
+  text-decoration: underline;
 }
 
 .search-form__fieldset-title {
