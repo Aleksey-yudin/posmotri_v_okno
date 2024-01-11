@@ -48,7 +48,7 @@ ol {
 
 .content__list {
   position: relative;
-  max-height: 300px;
+  height: 300px;
   overflow: auto;
   gap: 30px;
   display: flex;
