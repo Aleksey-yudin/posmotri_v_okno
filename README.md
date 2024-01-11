@@ -1,1 +1,1 @@
-https://github.com/Aleksey-yudin/posmotri_v_okno
+https://github.com/Aleksey-yudin/posmotri_v_okno.git
